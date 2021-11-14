@@ -1,27 +1,17 @@
 # Medicare 
+Medicare is among the most comprehensive and advanced health care systems in the world. It is our integrated mission to provide state-of-the-art patient care, to train top medical professionals and to support pioneering research and discovery.
 
-Live: 
+Live: https://medicare1081.netlify.app/
 Repo: https://github.com/Programming-Hero-Web-Course3/healthcare-related-website-rootOver3
 
 ## Features 
 - Login/Registration system.
 - About Medicare.
-- 
-- 
-- 
+- Medicare Services.
+- Medicare Lates Newses.
+- Medicare Contact portal.
 
 
-## Notes
-- Header navigation bar 
-- Hero banner.
-- Services (Min 6 services card with name, brief, loraen more button)
-- Learn more link need to be login protected.
-- Ayth system(Min 2 method. Form Auth and 1 OAuth)
-- Logged user name in navigation bar.
-- Footer
-### Extra 
-- 2 optional route.
-- Respinsive
 
 ### Branding 
 ```
