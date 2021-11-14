@@ -22,13 +22,13 @@ const Navigation = () => {
                 </Container>
             </Navbar> */}
 
-            <Navbar className="navbar-primary" bg="light" variant="light" sticky="top">
+            <Navbar className="navbar-primary" expand="sm" bg="light" variant="light" sticky="top">
                 <Container>
                     <Navbar.Brand href={`/`}>Medicare</Navbar.Brand>
 
-                    <Navbar.Toggle aria-controls="navbar-primary" />
+                    <Navbar.Toggle aria-controls="navbarPrimary" />
                     
-                    <Navbar.Collapse id="navbar-primary">
+                    <Navbar.Collapse id="navbarPrimary" >
                         <Nav className="mx-auto">
                             <Nav.Link href={`/`}>Home</Nav.Link>
                             <Nav.Link href={`/about`}>About</Nav.Link>
@@ -37,16 +37,18 @@ const Navigation = () => {
                         </Nav>
                         
                         <Nav className="user-profile">
+                            {/* Anonymas State */}
                             { !user.email && <>
                                 <Nav.Link href={`/login`}>Login</Nav.Link>
                                 <Nav.Link href={`/register`}>Register</Nav.Link>
                             </>}
+
+                            {/* Loggedin state */}
                             {user.email && <>
                                 <Navbar.Text>
                                     Signed in as: {user?.displayName?user?.displayName:'Nameless'} | 
                                 </Navbar.Text>
                                 <Nav.Link onClick={ () => signoutHandler()}>Sign out</Nav.Link>
-                                
                             </>}
                         </Nav>
                     </Navbar.Collapse>

@@ -52,6 +52,7 @@ img
 
 // Component: Paragraph
 p  
+  font-size: 16px
   line-height: 24px
 
 // Component: Link
@@ -68,7 +69,21 @@ p
 .s_title
   font-size: 58px
   font-weight: 700
+@media screen and ( max-width: 767px ) 
+  .s_title
+    font-size: 28px
+    font-weight: 700
+    
+@media screen and ( min-width: 768px ) and ( max-width: 1365px ) 
+  .s_title
+    font-size: 48px
+    font-weight: 700
+@media screen and ( min-width: 1366px ) 
+  .s_title
+    font-size: 58px
+    font-weight: 700
 
+  
 .paragraph-big
   font-size: 20px
 
@@ -83,6 +98,7 @@ p
   */
 
 .btn-custom
+  
   padding: 8px 32px !important
   border: 1px solid !important
   border-radius: 0  !important
@@ -173,16 +189,17 @@ section
     overflow: hidden
     &::after
       content: ''
-      width: 100%
-      height: 100%
+      min-width: 100%
+      min-height: 100%
       position: absolute 
       // opacity: .9
       z-index: 2
       background: $color-primary 
     .s_bg_img 
-      min: 100%
-      min-height: 100% 
+      min-width: 100%
+      min-height: 100vh 
       z-index: 1
+      object-fit: fill
       background-size: cover
       background-position: center 
       background-repeat: no-repeat 
@@ -191,25 +208,40 @@ section
   // min-width: 100vw
   min-height: calc(100vh - (56px + 40px) )
   .container 
+    h1, p 
+      color: #fff
 @media screen and ( min-width: 1366px )
   .s_hero 
     .hero_container
       width: 55%
-      h1, p 
-        color: #fff
+    
   
 // Section: Page Header 
 .section-page-header 
   .container 
-    padding-top: 100px 
-    padding-bottom: 100px 
+    padding-top: 80px 
+    padding-bottom: 80px 
     .s_title
       color: $color-bg
+@media screen and ( max-width: 767px ) 
+  .section-page-header 
+    .container 
+      padding-top: 60px 
+      padding-bottom: 60px 
+@media screen and ( min-width: 768px ) and ( max-width: 1365px ) 
+  .section-page-header 
+    .container 
+      padding-top: 80px 
+      padding-bottom: 80px 
+@media screen and ( min-width: 1366px ) 
+  .section-page-header 
+    .container 
+      padding-top: 100px 
+      padding-bottom: 100px 
 
 
+// Section: Service
 .s_services 
-  padding-top: 100px 
-  padding-bottom: calc( 100px - 3rem )
   color: $color-bg
   background: $color-primary
   ::selection
@@ -224,16 +256,79 @@ section
     .link 
       a 
         color: $color-bg
+@media screen and ( max-width: 767px ) 
+  .s_services 
+    padding-top: 60px 
+    padding-bottom: calc( 60px - 3rem )
+@media screen and ( min-width: 768px ) and ( max-width: 1365px ) 
+  .s_services 
+    padding-top: 80px 
+    padding-bottom: calc( 80px - 3rem )
+@media screen and ( min-width: 1366px ) 
+  .s_services 
+    padding-top: 100px 
+    padding-bottom: calc( 100px - 3rem )
 
 
+// Page: Single Service
 .s_sigle_service 
   background: $color-bg
   .container
-    padding-top: 100px
-    padding-bottom: 100px 
     p 
       font-size: 17px 
       line-height: 28px
+@media screen and ( max-width: 767px ) 
+  .s_sigle_service 
+    background: $color-bg
+    .container
+      padding-top: 60px
+      padding-bottom: 60px 
+@media screen and ( min-width: 768px ) and ( max-width: 1365px )
+  .s_sigle_service 
+    background: $color-bg
+    .container
+      padding-top: 80px
+      padding-bottom: 80px 
+@media screen and ( min-width: 1366px )
+  .s_sigle_service 
+    background: $color-bg
+    .container
+      padding-top: 100px
+      padding-bottom: 100px 
+    
+
+// Section: News
+.s_news
+  .container 
+@media screen and ( max-width: 767px ) 
+  .s_news
+    padding-top: 60px
+    padding-bottom: 60px
+@media screen and ( min-width: 768px ) and ( max-width: 1365px )
+  .s_news
+    padding-top: 80px
+    padding-bottom: 80px
+@media screen and ( min-width: 1366px )
+  .s_news
+    padding-top: 100px
+    padding-bottom: 100px
+
+
+// Section: Futured Resources
+.s_featured_resources 
+  background: $color-bg
+@media screen and ( max-width: 767px ) 
+  .s_featured_resources 
+    padding-top: 100px
+    padding-bottom: 100px
+@media screen and ( min-width: 768px ) and ( max-width: 1365px )
+  .s_featured_resources 
+    padding-top: 100px
+    padding-bottom: 100px
+@media screen and ( min-width: 1366px )
+  .s_featured_resources 
+    padding-top: 100px
+    padding-bottom: 100px
 
 
 .s_about
@@ -248,7 +343,45 @@ section
       p 
         color: $color-primary
         opacity: .9
+@media screen and ( max-width: 767px ) 
+  .s_about
+    .container
+      padding-top: 60px
+      padding-bottom: 60px
+@media screen and ( min-width: 768px ) and ( max-width: 1365px )
+  .s_about
+    .container
+      padding-top: 80px
+      padding-bottom: 80px
+@media screen and ( min-width: 1366px )
+  .s_about
+    .container
+      padding-top: 100px
+      padding-bottom: 100px
 
+
+// Section: About Us
+.s_about_us
+  color: $color-primary
+  background: $color-bg
+  .container
+    padding-top: 100px
+    padding-bottom: 100px
+@media screen and ( max-width: 767px ) 
+  .s_about_us
+    .container
+      padding-top: 60px
+      padding-bottom: 60px
+@media screen and ( min-width: 768px ) and ( max-width: 1365px )
+  .s_about_us
+    .container
+      padding-top: 80px
+      padding-bottom: 80px
+@media screen and ( min-width: 1366px )
+  .s_about_us
+    .container
+      padding-top: 100px
+      padding-bottom: 100px
 
 /**
   * Contact
@@ -257,6 +390,18 @@ section
   padding-top: 100px
   padding-bottom: 100px
   background: $color-bg
+@media screen and ( max-width: 767px ) 
+  .s_contact 
+    padding-top: 60px
+    padding-bottom: 60px
+@media screen and ( min-width: 768px ) and ( max-width: 1365px )
+  .s_contact 
+    padding-top: 80px
+    padding-bottom: 80px
+@media screen and ( min-width: 1366px )
+  .s_contact 
+    padding-top: 100px
+    padding-bottom: 100px
 
 
 // Error 404 
@@ -271,6 +416,21 @@ section
       justify-content: center
       h1 
         color: $color-primary 
+@media screen and ( max-width: 767px ) 
+  .error-404  
+    .container 
+      padding-top: 60px 
+      padding-bottom: 60px 
+@media screen and ( min-width: 768px ) and ( max-width: 1365px )
+  .error-404  
+    .container 
+      padding-top: 80px 
+      padding-bottom: 80px
+@media screen and ( min-width: 1366px )
+  .error-404  
+    .container 
+      padding-top: 100px 
+      padding-bottom: 100px
 
 
 // Page: Login & Register
@@ -286,5 +446,18 @@ section
   .message-box  
     p
       padding-bottom: 0px !important
-
-      
+@media screen and ( max-width: 767px ) 
+  .s_login 
+    .login_Content 
+      padding-top: 60px
+      padding-bottom: 60px
+@media screen and ( min-width: 768px ) and ( max-width: 1365px )
+  .s_login 
+    .login_Content 
+      padding-top: 80px
+      padding-bottom: 80px
+@media screen and ( min-width: 1366px )
+  .s_login 
+    .login_Content 
+      padding-top: 100px
+      padding-bottom: 100px

@@ -86,7 +86,7 @@ const Login = () => {
                                                     <ErrorMessage name="password" className="text-red" component="p" />
                                                 </Stack>
 
-                                                <Button type="submit" className="bg-black border-white" variant="custom">Submit</Button>
+                                                <Button type="submit" className="bg-black border-white" variant="custom">Log in</Button>
                                             </Form>
                                         )}
                                     </Formik>

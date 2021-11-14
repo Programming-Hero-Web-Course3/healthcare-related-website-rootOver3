@@ -8,7 +8,7 @@ const SectionAbout = () => {
                 <Row>
                     {/* Left Side */}
                     <Col lg={5} md={5} sm={12}>
-                        <div className="about_left d-flex flex-column h-100 justify-content-center">
+                        <div className="about_left d-flex flex-column h-100 mb-4 justify-content-center">
                             <Image src={`/img/p1.jpg`} className="w-full" />
                         </div>
                     </Col>

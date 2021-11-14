@@ -4,8 +4,8 @@ Live:
 Repo:
 
 ## Features 
-- 
-- 
+- Login/Registration system.
+- About Medicare.
 - 
 - 
 - 
@@ -26,8 +26,7 @@ Repo:
 ### Branding 
 ```
 Primary     : #064848
-Secondary   : 
-BG          : 
-Light       :
-Dark        :
+BG          : #FFE8E3
+Light       : #FFFFFF
+Dark        : #000000
 ```
