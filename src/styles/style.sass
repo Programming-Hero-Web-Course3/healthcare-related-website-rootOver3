@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&display=swap')
+
+
+/* ********************************
+ * Colors
+ ******************************** */
+$color-primary: #064848
+$color-bg: #FFE8E3
+$color-light: #FFFFFF
+$color-dark: #10312B
+$color-black: #000000
+// FFA400
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+  &::before, &:after
+    box-sizing: border-box
+
+// Slection
+::selection 
+  color: $color-light 
+  background: $color-primary
+
+
+html, body 
+  font-family: 'Mulish', sans-serif
+
+// Headings
+h1, h2, h3, h4, h5, h6 
+  font-family: 'Mulish', sans-serif
+  font-weight: 900
+
+
+
+/**
+  * Overrides
+  */
+.bg-custom 
+  background: $color-primary
+
+
+// Component: Image
+img
+  max-width: 100%
+
+/**
+ * Components
+ */
+
+// Component: Paragraph
+p  
+  line-height: 24px
+
+// Component: Link
+.link  
+  a
+    font-size: 16px
+    color: $color-primary
+    font-weight: 600
+    &:hover
+      color: $color-primary
+      opacity: .9 !important
+
+// Custom Components
+.s_title
+  font-size: 58px
+  font-weight: 700
+
+.paragraph-big
+  font-size: 20px
+
+// List 
+
+.list 
+  // margin: 0
+  list-style-type: circle
+
+/**
+  * Buttons
+  */
+
+.btn-custom
+  padding: 8px 32px !important
+  border: 1px solid !important
+  border-radius: 0  !important
+  &:hover
+    opacity: .9
+  &.bg-primary
+    color: $color-light !important
+    background: $color-primary !important
+  &.bg-black 
+    color: $color-light
+    background: $color-black !important
+    &:hover
+      color: $color-light
+  &.bg-white 
+    background: $color-light !important
+  &.border-black 
+    border: 1px solid $color-black !important
+  &.border-white 
+    border: 1px solid $color-light !important
+
+
+
+/**
+  * Navigation 
+  */
+header 
+  .navbar-primary
+  .navbar-secondery
+    padding: 0 !important
+
+
+// Form 
+input[type="text"], input[type="email"], input[type="password"], textarea
+  padding: 8px 15px
+  background: #d1d1d16c
+  border: 1px solid transparent
+  border-radius: 0 !important
+  &.border-red
+    border: 1px solid red
+  &:focus
+    border-radius: 0 !important
+    border: 1px solid $color-primary
+    outline: none
+input[type="text"]
+input[type="email"]
+input[type="password"]
+textarea
+form 
+  .text-red 
+    color: red
+
+
+
+// Footer 
+footer 
+  padding-top: 60px
+  padding-bottom: 20px
+  color: $color-bg
+  background: $color-primary
+  h4 
+    color: $color-bg
+  .inline-menu 
+    .link
+      a 
+        margin-right: 15px
+  .link 
+    a 
+      color: $color-bg
+      font-weight: 400 
+      text-decoration: none 
+      &:hover
+         color: $color-bg 
+         opacity: .9 
+         text-decoration: underline
+  .copyright 
+    border-top: 1px solid $color-bg
+
+/**
+ * Page: Home
+ */
+section
+  .s_bg
+    width: 100%
+    min-height: 100%
+    position: absolute 
+    display: block
+    z-index: -1
+    overflow: hidden
+    &::after
+      content: ''
+      width: 100%
+      height: 100%
+      position: absolute 
+      // opacity: .9
+      z-index: 2
+      background: $color-primary 
+    .s_bg_img 
+      min: 100%
+      min-height: 100% 
+      z-index: 1
+      background-size: cover
+      background-position: center 
+      background-repeat: no-repeat 
+
+.s_hero 
+  // min-width: 100vw
+  min-height: calc(100vh - (56px + 40px) )
+  .container 
+@media screen and ( min-width: 1366px )
+  .s_hero 
+    .hero_container
+      width: 55%
+      h1, p 
+        color: #fff
+  
+// Section: Page Header 
+.section-page-header 
+  .container 
+    padding-top: 100px 
+    padding-bottom: 100px 
+    .s_title
+      color: $color-bg
+
+
+.s_services 
+  padding-top: 100px 
+  padding-bottom: calc( 100px - 3rem )
+  color: $color-bg
+  background: $color-primary
+  ::selection
+    color: $color-primary
+    background: $color-bg
+  .service-card 
+    p 
+      width: 80%
+      font-size: 14px
+      line-height: 20px 
+      opacity: .9
+    .link 
+      a 
+        color: $color-bg
+
+
+.s_sigle_service 
+  background: $color-bg
+  .container
+    padding-top: 100px
+    padding-bottom: 100px 
+    p 
+      font-size: 17px 
+      line-height: 28px
+
+
+.s_about
+  color: $color-primary
+  background: $color-bg
+  .container
+    padding-top: 100px
+    padding-bottom: 100px
+  .about_right, .about_left
+    .about_right
+      margin-left: 35px !important
+      p 
+        color: $color-primary
+        opacity: .9
+
+
+/**
+  * Contact
+  */
+.s_contact 
+  padding-top: 100px
+  padding-bottom: 100px
+  background: $color-bg
+
+
+// Error 404 
+.error-404  
+  background: $color-bg
+  .container 
+    padding-top: 100px 
+    padding-bottom: 100px  
+    .section-container 
+      display: flex
+      flex-direction: column 
+      justify-content: center
+      h1 
+        color: $color-primary 
+
+
+// Page: Login & Register
+.s_login 
+  width: 100%
+  min-height: calc(100vh - (56px + 40px)) 
+  background: $color-bg
+  .login_Content 
+    padding-top: 100px
+    padding-bottom: 100px
+    form   
+    .d_0_auth  
+  .message-box  
+    p
+      padding-bottom: 0px !important
+
+      
