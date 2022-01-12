@@ -20,12 +20,14 @@ const SectionNews = () => {
                 <Row>
                     {/* Left Side */}
                     { newsDB && newsDB.map( news => <>
-                        <Col lg={3} md={3} sm={6} key={news?._id}>  
+                        <Col xl={3} lg={3} md={6} sm={6} xs={12} key={news?._id}>  
                             <Card className="news-card mb-5">
                                 <Card.Img variant="top" src={news.img}/>
                                 <Card.Body>
-                                    <Card.Title>{news.title}</Card.Title>
-                                    <Card.Text>{news?.description}</Card.Text>
+                                    <div>
+                                        <Card.Title>{news.title}</Card.Title>
+                                        <Card.Text>{news?.description}</Card.Text>
+                                    </div>
                                     
                                     <p className="link">
                                         <Link to={`/news/${news?._id}`}>Learn more</Link>

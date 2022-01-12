@@ -73,7 +73,6 @@ p
   .s_title
     font-size: 28px
     font-weight: 700
-    
 @media screen and ( min-width: 768px ) and ( max-width: 1365px ) 
   .s_title
     font-size: 48px
@@ -98,10 +97,11 @@ p
   */
 
 .btn-custom
-  
   padding: 8px 32px !important
   border: 1px solid !important
   border-radius: 0  !important
+  .btn-sm 
+    padding: 4px 8px !important
   &:hover
     opacity: .9
   &.bg-primary
@@ -112,6 +112,7 @@ p
     background: $color-black !important
     &:hover
       color: $color-light
+      background: $color-primary !important
   &.bg-white 
     background: $color-light !important
   &.border-black 
@@ -300,6 +301,18 @@ section
 // Section: News
 .s_news
   .container 
+    .news-card 
+      height: 100%
+      background: #06484812 
+      border: none 
+      border-radius: 0
+      .card-body
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .card-text 
+          font-size: 14px
+          line-height: 20px
 @media screen and ( max-width: 767px ) 
   .s_news
     padding-top: 60px

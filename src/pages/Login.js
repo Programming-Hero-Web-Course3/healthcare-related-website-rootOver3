@@ -66,7 +66,7 @@ const Login = () => {
                                         {({values}) => (
 
                                             <Form>
-                                                <h1>Log in</h1>
+                                                <h1 className="mb-4">Log in</h1>
 
                                                 {message && <>
                                                     <div className="message-box text-light bg-custom p-3 mt-3 mb-4">
@@ -75,24 +75,24 @@ const Login = () => {
                                                 </>}
                                                     
                                                 <Stack className="mb-3" direction="vertical">
-                                                    <label htmlFor="email">Email</label>
+                                                    <label className="mb-1" htmlFor="email">Email</label>
                                                     <Field type="email" name="email" placeholder="example@mail.com" />
                                                     <ErrorMessage name="email" className="text-red" component="p" />
                                                 </Stack>
                                                 
                                                 <Stack className="mb-3" direction="vertical">
-                                                    <label htmlFor="password">Password</label>
+                                                    <label className="mb-1" htmlFor="password">Password</label>
                                                     <Field type="password" name="password" placeholder="Password" />
                                                     <ErrorMessage name="password" className="text-red" component="p" />
                                                 </Stack>
 
-                                                <Button type="submit" className="bg-black border-white" variant="custom">Log in</Button>
+                                                <Button type="submit" className="bg-black border-white w-100" variant="custom">Log in</Button>
                                             </Form>
                                         )}
                                     </Formik>
 
                                     <div className="d_0_auth mb-4">
-                                        <Button className="btn bg-primary border-white mt-3" variant="custom" onClick={() => signinWith0Handler('google')}>Google</Button>
+                                        <Button className="btn bg-primary border-white w-100 mt-3" variant="custom" onClick={() => signinWith0Handler('google')}>Google</Button>
                                     </div>
 
                                     <div className="link">

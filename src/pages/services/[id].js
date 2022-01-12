@@ -6,7 +6,9 @@ import { servicesDB } from "../../db/servicesDB"
 
 const SingleService = () => {
     const {id} = useParams()
-    const data = servicesDB[id] 
+    const data = servicesDB[id]
+    console.log(servicesDB);
+    console.log(id , data)
 
     return (
         <>

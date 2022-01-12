@@ -1,4 +1,4 @@
-import { Row, Col, Container } from 'react-bootstrap'
+import { Row, Col, Container, Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import {servicesDB} from '../../../db/servicesDB'
 
@@ -20,13 +20,16 @@ const SectionServices = () => {
                 <Row>
                     {/* Left Side */}
                     { servicesDB && servicesDB.map( service => <>
-                        <Col lg={4} md={4} sm={6} key={service?._id}>  
+                        <Col xl={4} lg={4} md={6} sm={6} key={service?._id}>  
                             <div className="service-card mb-5">
-                                <h4>{service.title}</h4>
-                                <p>{service?.description}</p>
-                                
+                                <img variant="top" className="mb-4" src={service?.img}/>
+                                <div>
+                                    <h4>{service.title}</h4>
+                                    <p>{service?.description}</p>
+                                </div>
+                                    
                                 <p className="link">
-                                    <Link to={`/services/${service?._id}`}>Learn more</Link>
+                                    <Link className="btn btn-custom" to={`/services/${service?._id}`}>Learn more</Link>
                                 </p>
                             </div>
                         </Col>

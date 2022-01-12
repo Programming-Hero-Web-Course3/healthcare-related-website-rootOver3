@@ -33,24 +33,24 @@ const ContactForm = () => {
                     {({values}) => (
                         <Form>
                             <Stack className="mb-3" direction="vertical">
-                                <label htmlFor="name" className="mb-1">Name</label>
+                                <label className="mb-1" htmlFor="name" className="mb-1">Name</label>
                                 <Field type="text" name="name" placeholder="Jhon Doe" />
                                 <ErrorMessage name="name" className="text-red" component="p" />
                             </Stack>
 
                             <Stack className="mb-3" direction="vertical">
-                                <label htmlFor="email">Email</label>
+                                <label className="mb-1" htmlFor="email">Email</label>
                                 <Field type="email" name="email" placeholder="example@mail.com" />
                                 <ErrorMessage name="email" className="text-red" component="p" />
                             </Stack>
                             
                             <Stack className="mb-3" direction="vertical">
-                                <label htmlFor="subject">Subject</label>
+                                <label className="mb-1" htmlFor="subject">Subject</label>
                                 <Field type="text" name="subject" placeholder="Subject" />
                             </Stack>
                         
                             <Stack className="mb-3" direction="vertical">
-                                <label htmlFor="message">Message</label>
+                                <label className="mb-1" htmlFor="message">Message</label>
                                 <Field component="textarea" name="message" placeholder="Write your message here..." />
                                 <ErrorMessage name="message" className="text-red" component="p" />
                             </Stack>

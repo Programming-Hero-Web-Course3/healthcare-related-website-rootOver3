@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Nav, Navbar } from 'react-bootstrap'
+import { Container, Nav, Navbar, Button } from 'react-bootstrap'
 import useAuth from '../../hooks/useAuth'
 
 
@@ -48,7 +48,9 @@ const Navigation = () => {
                                 <Navbar.Text>
                                     Signed in as: {user?.displayName?user?.displayName:'Nameless'} | 
                                 </Navbar.Text>
-                                <Nav.Link onClick={ () => signoutHandler()}>Sign out</Nav.Link>
+                                <Nav.Link>
+                                    <Button variant='custom' onClick={ signoutHandler } size="sm">Sign out</Button>
+                                </Nav.Link>
                             </>}
                         </Nav>
                     </Navbar.Collapse>
